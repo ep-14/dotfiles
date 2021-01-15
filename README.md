@@ -2,7 +2,11 @@
 
 [rcm](https://github.com/thoughtbot/rcm) is required.
 
+
+## Setup
+
 ```bash
-$ mkdir -p ~/.zsh
-$ git clone https://github.com/sindresorhus/pure.git ~/.zsh/pure
+$ git clone https://github.com/car7ary/dotfiles.git ~/.dotfiles
+$ cd ~/.dotfiles
+$ ./setup.sh
 ```
