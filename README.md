@@ -1,12 +1,13 @@
 # dotfiles
 
-[rcm](https://github.com/thoughtbot/rcm) is required.
+- [rcm](https://github.com/thoughtbot/rcm) is required.
 
-
-## Setup
+## Installation
 
 ```bash
-$ git clone https://github.com/car7ary/dotfiles.git ~/.dotfiles
+$ git clone https://github.com/car7ary/dotfiles ~/.dotfiles
 $ cd ~/.dotfiles
-$ ./setup.sh
+$ ./init.sh
+$ RCRC="./rcrc" rcup
 ```
+

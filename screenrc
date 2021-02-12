@@ -5,7 +5,7 @@ defencoding utf-8
 defkanji utf-8
 
 # shell
-shell /usr/bin/zsh
+shell /bin/bash
 
 # Status bar
 hardstatus alwayslastline "%{= cd} %-w%{= dd} %n %t* %{-}%+w %="
@@ -25,3 +25,6 @@ term xterm-256color
 startup_message off
 vbell off
 
+# Logging
+logfile "$HOME/logs/screen/screen-%Y%m%d-%n.log"
+deflog on
