@@ -6,3 +6,5 @@
 	default = simple
 [pull]
 	rebase = false
+[user]
+	useConfigOnly = true

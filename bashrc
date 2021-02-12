@@ -13,10 +13,17 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-# ls
+# ls alias
 alias ls='ls --color'
 alias ll='ls -l'
 alias la='ls -al'
+
+# vi alias
+if type "nvim" > /dev/null 2>&1; then
+    alias vi="nvim"
+elif type "vim" > /dev/null 2>&1; then
+    alias vi="vim"
+fi
 
 # Prompt
 RED="\[\033[0;31m\]"
@@ -30,12 +37,5 @@ else
     isssh="${GREEN}[local]${RESET}"
 fi
 
-gitstatus='$(__git_ps1 "(%s)")'
-export PS1="${isssh} \u@\H: ${CYAN}\w${RESET} ${gitstatus} \n\$ "
+export PS1="${isssh} \u@\H: ${CYAN}\w${RESET}\n\$ "
 
-# alias
-if type "nvim" > /dev/null 2>&1; then
-    alias vi="nvim"
-elif type "vim" > /dev/null 2>&1; then
-    alias vi="vim"
-fi
