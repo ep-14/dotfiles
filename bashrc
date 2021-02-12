@@ -32,3 +32,10 @@ fi
 
 gitstatus='$(__git_ps1 "(%s)")'
 export PS1="${isssh} \u@\H: ${CYAN}\w${RESET} ${gitstatus} \n\$ "
+
+# alias
+if type "nvim" > /dev/null 2>&1; then
+    alias vi="nvim"
+elif type "vim" > /dev/null 2>&1; then
+    alias vi="vim"
+fi
