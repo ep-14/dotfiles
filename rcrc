@@ -1,1 +1,1 @@
-EXCLUDES="setup.sh README.md LICENSE"
+EXCLUDES="init.sh README.md LICENSE"
