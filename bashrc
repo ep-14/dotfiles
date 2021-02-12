@@ -21,6 +21,7 @@ alias la='ls -al'
 # vi alias
 if type "nvim" > /dev/null 2>&1; then
     alias vi="nvim"
+    alias vim="nvim"
 elif type "vim" > /dev/null 2>&1; then
     alias vi="vim"
 fi

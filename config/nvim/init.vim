@@ -57,5 +57,6 @@ inoremap <silent> jj <ESC>
 set t_Co=256
 set background=dark
 
+colorscheme gruvbox
 filetype plugin indent on
 syntax on
