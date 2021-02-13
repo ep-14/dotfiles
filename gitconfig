@@ -8,3 +8,5 @@
 	rebase = false
 [user]
 	useConfigOnly = true
+[ghq]
+    root = ~/src
