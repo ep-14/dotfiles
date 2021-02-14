@@ -40,3 +40,5 @@ fi
 
 export PS1="${isssh} \u@\H: ${CYAN}\w${RESET}\n\$ "
 
+# Include
+. ~/.bash/peco-src.bash
