@@ -24,3 +24,6 @@ $ RCRC="./rcrc" rcup
 mkrc -o <file>
 ```
 
+## Vim
+
+PlugInstall

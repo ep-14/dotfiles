@@ -22,6 +22,7 @@ alias la='ls -al'
 if type "nvim" > /dev/null 2>&1; then
     alias vi="nvim"
     alias vim="nvim"
+    alias vicon="vim ${HOME}/.dotfiles/config/nvim/init.vim"
 elif type "vim" > /dev/null 2>&1; then
     alias vi="vim"
 fi

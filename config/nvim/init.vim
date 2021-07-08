@@ -1,56 +1,17 @@
-" ----  dein.vim ----
-let s:dein_dir = expand('~/.cache/dein')
-let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
+" vim-plug
+call plug#begin('~/.local/share/nvim/plugged')
+Plug 'previm/previm'
+Plug 'ntpeters/vim-better-whitespace'
+call plug#end()
 
-" dein installation check
-if &runtimepath !~# '/dein.vim'
-  if !isdirectory(s:dein_repo_dir)
-    execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
-  endif
-  execute 'set runtimepath^=' . s:dein_repo_dir
-endif
+" plugins
+let g:better_whitespace_enabled=1
+let g:strip_whitespaces_on_save=1
 
-" begin settings
-if dein#load_state(s:dein_dir)
-  call dein#begin(s:dein_dir)
+" keybind
+inoremap <silent> jj <ESC>
 
-  " .toml file
-  let s:rc_dir = expand('~/.config/dein')
-  if !isdirectory(s:rc_dir)
-    call mkdir(s:rc_dir, 'p')
-  endif
-  let s:toml = s:rc_dir . '/dein.toml'
-  let s:lazy_toml = s:rc_dir . '/dein_lazy.toml'
-
-  " read toml and cache
-  call dein#load_toml(s:toml, {'lazy': 0})
-  call dein#load_toml(s:toml, {'lazy_toml': 1})
-
-  " end settings
-  call dein#end()
-  call dein#save_state()
-endif
-
-" plugin installation check
-if dein#check_install()
-  call dein#install()
-endif
-
-" plugin remove check
-let s:removed_plugins = dein#check_clean()
-if len(s:removed_plugins) > 0
-  call map(s:removed_plugins, "delete(v:val, 'rf')")
-  call dein#recache_runtimepath()
-endif
-
-" ---- general ----
-set number
-set autoindent
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set expandtab
-
+" autocmd
 augroup TransparentBG
   autocmd!
   autocmd Colorscheme * highlight Normal ctermbg=none
@@ -60,11 +21,16 @@ augroup TransparentBG
   autocmd Colorscheme * highlight EndOfBuffer ctermbg=none
 augroup END
 
-" ---- keybind ----
-inoremap <silent> jj <ESC>
-
+" general
+set number
+set autoindent
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
 set t_Co=256
 set background=dark
 colorscheme gruvbox
 filetype plugin indent on
 syntax on
+
