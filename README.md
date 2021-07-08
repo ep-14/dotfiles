@@ -5,7 +5,7 @@
 ## インストール
 
 ```bash
-$ git clone https://github.com/car7ary/dotfiles ~/.dotfiles
+$ git clone https://github.com/ep-14/dotfiles ~/.dotfiles
 $ cd ~/.dotfiles
 $ ./init.sh
 $ RCRC="./rcrc" rcup
